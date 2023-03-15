@@ -1,0 +1,282 @@
+
+This appendix presents the results of the different weak (\gls{WM}) and strong mutations (\gls{SM}) \glspl{ALE}/\glspl{BS}/\glspl{RS} algorithms. For each algorithm, a table gives the recall, the average execution time ($\overline{\mathbf{time}}$), and the standard deviation ($\sigma$).
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{S.V.Mach.}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  svm 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & $<$0.01  & $<$0.01  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 98\% & 0.02  & 0.03  & 91\% & 0.26  & 1.00\\
+ & 1e-10  & 0.10  & 97\% & 0.02  & 0.02  & 91\% & 0.04  & 0.06\\
+ & 1e-05  & 0.10  & 97\% & $<$0.01  & 0.02  & 91\% & 0.03  & 0.05\\
+ & 0.10  & 0.10  & 98\% & 0.01  & 0.02  & 91\% & 0.02  & 0.04\\
+\textbf{RS}  & 1e-10  & 0.01  & 97\% & 0.02  & 0.03 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 96\% & 0.01  & 0.02 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 97\% & $<$0.01  & 0.01 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 97\% & 0.01  & 0.03 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{C.P.Term.}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  cpterminal 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & $<$0.01  & $<$0.01  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 97\% & 0.49  & 9.05  & 91\% & 0.21  & 0.76\\
+ & 1e-10  & 0.10  & 96\% & 0.02  & 0.10  & 91\% & 0.04  & 0.05\\
+ & 1e-05  & 0.10  & 97\% & 0.01  & 0.05  & 91\% & 0.03  & 0.05\\
+ & 0.10  & 0.10  & 96\% & 0.01  & 0.03  & 91\% & 0.03  & 0.04\\
+\textbf{RS}  & 1e-10  & 0.01  & 97\% & 0.49  & 9.04 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 96\% & 0.02  & 0.11 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 97\% & $<$0.01  & 0.05 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 96\% & 0.01  & 0.04 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Minepump}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  minepump 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & $<$0.01  & $<$0.01  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 98\% & 0.40  & 8.54  & 92\% & 0.21  & 0.80\\
+ & 1e-10  & 0.10  & 98\% & 0.02  & 0.15  & 92\% & 0.04  & 0.06\\
+ & 1e-05  & 0.10  & 99\% & $<$0.01  & 0.04  & 92\% & 0.03  & 0.05\\
+ & 0.10  & 0.10  & 98\% & 0.01  & 0.04  & 92\% & 0.03  & 0.04\\
+\textbf{RS}  & 1e-10  & 0.01  & 98\% & 0.39  & 8.43 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 98\% & 0.02  & 0.15 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 98\% & $<$0.01  & 0.06 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 98\% & 0.01  & 0.05 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small}  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Claroline}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  claroline 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & 0.02  & 0.02  & 100\% & 0.10  & 0.12  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 99\% & 3.62  & 49.96  & 98\% & 0.59  & 2.00\\
+ & 1e-10  & 0.10  & 99\% & 0.09  & 0.57  & 98\% & 0.17  & 0.42\\
+ & 1e-05  & 0.10  & 99\% & 0.07  & 0.32  & 98\% & 0.17  & 0.28\\
+ & 0.10  & 0.10  & 99\% & 0.05  & 0.12  & 98\% & 0.18  & 0.71\\
+\textbf{RS}  & 1e-10  & 0.01  & 96\% & 29.99  & 139.34 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 95\% & 0.39  & 1.52 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 94\% & 0.23  & 0.80 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 94\% & 0.10  & 0.25 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Elsa-RR}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  elsaRR 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & 1.05  & 0.67  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 99\% & 0.06  & 0.05  & 95\% & 0.96  & 3.86\\
+ & 1e-10  & 0.10  & 100\% & 0.04  & 0.04  & 95\% & 0.15  & 0.27\\
+ & 1e-05  & 0.10  & 99\% & 0.05  & 0.04  & 95\% & 0.13  & 0.19\\
+ & 0.10  & 0.10  & 100\% & 0.02  & 0.03  & 95\% & 0.09  & 0.16\\
+\textbf{RS}  & 1e-10  & 0.01  & 88\% & 73.03  & 209.50 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 86\% & 0.92  & 2.56 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 86\% & 0.51  & 1.38 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 87\% & 0.13  & 0.33 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Elsa-RRN}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  elsaRRN 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & 0.01  & 0.01  & 100\% & 3.64  & 2.29  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.05  & 0.05  & 90\% & 2.93  & 10.34\\
+ & 1e-10  & 0.10  & 100\% & 0.04  & 0.04  & 90\% & 0.18  & 0.25\\
+ & 1e-05  & 0.10  & 99\% & 0.04  & 0.04  & 90\% & 0.16  & 0.21\\
+ & 0.10  & 0.10  & 100\% & 0.03  & 0.03  & 90\% & 0.10  & 0.11\\
+\textbf{RS}  & 1e-10  & 0.01  & 97\% & 19.24  & 100.73 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 95\% & 0.37  & 1.42 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 95\% & 0.22  & 0.75 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 94\% & 0.08  & 0.21 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{AGE-RR}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  ageRR 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & 0.64  & 0.94  & 100\% & 21.18  & 13.70  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.06  & 0.08  & 90\% & 9.38  & 42.87\\
+ & 1e-10  & 0.10  & 100\% & 0.05  & 0.10  & 90\% & 0.24  & 0.45\\
+ & 1e-05  & 0.10  & 100\% & 0.04  & 0.08  & 90\% & 0.18  & 0.47\\
+ & 0.10  & 0.10  & 100\% & 0.03  & 0.04  & 89\% & 0.09  & 0.25\\
+\textbf{RS}  & 1e-10  & 0.01  & 96\% & 38.68  & 188.18 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 94\% & 0.68  & 2.50 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 95\% & 0.35  & 1.27 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 94\% & 0.14  & 0.47 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{AGE-RRN}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  ageRRN 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & 0.21  & 0.22  & 100\% & 75.29  & 51.92  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.04  & 0.07  & 95\% & 7.10  & 32.32\\
+ & 1e-10  & 0.10  & 100\% & 0.05  & 0.05  & 95\% & 0.32  & 0.46\\
+ & 1e-05  & 0.10  & 100\% & 0.04  & 0.04  & 95\% & 0.27  & 0.43\\
+ & 0.10  & 0.10  & 100\% & 0.04  & 0.04  & 95\% & 0.21  & 0.31\\
+\textbf{RS}  & 1e-10  & 0.01  & 90\% & 117.21  & 362.41 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 88\% & 1.98  & 4.78 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 87\% & 1.12  & 2.63 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 85\% & 0.41  & 0.87 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Random models}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Random 1}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  ts-f5e050b4-7767-4d96-9160-fa51184efff0 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & 448.61  & 339.19  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.08  & 0.07  & 92\% & 0.78  & 2.50\\
+ & 1e-10  & 0.10  & 100\% & 0.07  & 0.07  & 92\% & 0.09  & 0.08\\
+ & 1e-05  & 0.10  & 100\% & 0.07  & 0.07  & 92\% & 0.09  & 0.06\\
+ & 0.10  & 0.10  & 99\% & 0.07  & 0.07  & 92\% & 0.07  & 0.05\\
+\textbf{RS}  & 1e-10  & 0.01  & 100\% & 0.03  & 0.07 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 100\% & 0.03  & 0.11 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 100\% & 0.03  & 0.09 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 99\% & 0.03  & 0.08 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Random 2}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  ts-62e92b35-b095-4942-a370-507615469463 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & 412.37  & 168.90  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.11  & 0.06  & 89\% & 1.22  & 3.35\\
+ & 1e-10  & 0.10  & 100\% & 0.10  & 0.06  & 89\% & 0.14  & 0.09\\
+ & 1e-05  & 0.10  & 100\% & 0.11  & 0.07  & 89\% & 0.14  & 0.08\\
+ & 0.10  & 0.10  & 100\% & 0.11  & 0.06  & 89\% & 0.12  & 0.07\\
+\textbf{RS}  & 1e-10  & 0.01  & 100\% & 0.04  & 0.10 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 100\% & 0.03  & 0.07 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 100\% & 0.03  & 0.07 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 99\% & 0.03  & 0.09 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small}  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Random 3}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  ts-51d69eaf-3bd1-40af-aef0-983d75dc673e 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & 367.99  & 154.80  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.11  & 0.06  & 91\% & 1.04  & 3.20\\
+ & 1e-10  & 0.10  & 100\% & 0.09  & 0.04  & 91\% & 0.23  & 0.15\\
+ & 1e-05  & 0.10  & 100\% & 0.09  & 0.04  & 91\% & 0.23  & 0.14\\
+ & 0.10  & 0.10  & 100\% & 0.09  & 0.05  & 91\% & 0.19  & 0.12\\
+\textbf{RS}  & 1e-10  & 0.01  & 100\% & 0.03  & 0.10 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 100\% & 0.03  & 0.16 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 99\% & 0.03  & 0.12 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 99\% & 0.02  & 0.07 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Random 4}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%  ts-6cc2cfa6-f302-44da-8482-8ecb045fd8d9 
+\begin{small} 
+\begin{tabular}{lll|r|r|r|r|r|r} 
+ & & & \multicolumn{3}{c|}{\textbf{Weak Mutation}} & \multicolumn{3}{c}{\textbf{Strong Mutation}}\\ 
+ & $\delta$ & $\epsilon$ & Recall & $\overline{time}$ & $\sigma$ & Recall & $\overline{time}$ & $\sigma$ \\  
+\hline 
+\textbf{ALE} & & & 100\% & $<$0.01  & $<$0.01  & 100\% & 306.37  & 127.02  \\ 
+\textbf{BS}  & 1e-10  & 0.01  & 100\% & 0.11  & 0.06  & 91\% & 1.09  & 3.23\\
+ & 1e-10  & 0.10  & 100\% & 0.10  & 0.05  & 91\% & 0.22  & 0.14\\
+ & 1e-05  & 0.10  & 100\% & 0.10  & 0.05  & 91\% & 0.23  & 0.12\\
+ & 0.10  & 0.10  & 100\% & 0.09  & 0.04  & 91\% & 0.19  & 0.11\\
+\textbf{RS}  & 1e-10  & 0.01  & 100\% & 0.04  & 0.25 & N/A & N/A & N/A \\
+ & 1e-10  & 0.10  & 99\% & 0.03  & 0.25 & N/A & N/A & N/A \\
+ & 1e-05  & 0.10  & 100\% & 0.03  & 0.10 & N/A & N/A & N/A \\
+ & 0.10  & 0.10  & 99\% & 0.02  & 0.09 & N/A & N/A & N/A \\
+\end{tabular} 
+\end{small}
+
+
