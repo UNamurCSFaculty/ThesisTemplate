@@ -55,10 +55,10 @@ Under the following terms:
 More details: http://creativecommons.org/licenses/by-nc-sa/4.0/                        
                                                                                        
 Authors:                                                                               
-   * Fabian Gilson                                                                   
-   * Nicolas Genon
+   * [Fabian Gilson](https://researchportal.unamur.be/fr/persons/fgilson)                                                                 
+   * [Nicolas Genon](https://researchportal.unamur.be/fr/persons/nicolas-genon)
 
 Contributors:                                                                          
-   * Maxime Cauz                                                                       
-   * Maxime André                                                                      
+   * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
+   * [Maxime André](https://researchportal.unamur.be/fr/persons/maxime-andr%C3%A9)
                                                                                        
