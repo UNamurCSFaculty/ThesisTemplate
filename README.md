@@ -1,5 +1,7 @@
 # PhD thesis template for Computer Science Faculty of the University of Namur
 
+![UNamur Computer Science Faculty](https://avatars.githubusercontent.com/u/26461656?s=200&v=4)
+
 ## Description
 
 This project contains a proposal for a template intended for PhD students writing their doctoral thesis in the 
@@ -61,4 +63,3 @@ Authors:
 Contributors:                                                                          
    * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
    * [Maxime André](https://researchportal.unamur.be/fr/persons/maxime-andr%C3%A9)
-                                                                                       
