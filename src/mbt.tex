@@ -1,0 +1,37 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Software testing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Software testing is a process present in a majority of software system developments. According to Mathur's definitions \cite{Mathur2008}, it aims at evaluating if a software behaves as expected. When running a software system, one may face a \emph{\gls{failure}}, \ie an unexpected behaviour of the system. This failure is the propagation to the output of the system of one or more \emph{\glspl{bug}} (also called \emph{\glspl{fault}}), coming from \emph{\glspl{error}} made during the writing of the source code of the software system. The goal of a software testing process is to find as many bugs as possible in a given software system, called \acrfull{SUT}, in order to prevent failures to happen during the operation of the software system.
+
+Another definition from the Software Engineering Body of Knowledge~\cite{swebok2014} defines software testing as follows:
+%
+\begin{quote}
+Software testing consists of the \emph{dynamic} verification that a program provides \emph{expected} behaviours on a \emph{finite} set of test cases, suitably \emph{selected} from the usually infinite execution domain.
+\end{quote}
+%
+This definition, although not specific on how to perform software testing, includes different important aspects. First, the SUT has to be \emph{executed} on a set of input values\footnote{In this case, input values may refer to input data or, more generally, to a specific input state of the SUT.} in order to observe its behaviour. Second, to decide if the SUT behaves as expected, it must be possible, based on the outcomes of the SUT for a given input, to decide if the outcomes are acceptable or not. This is also referred to as \emph{the oracle problem} \cite{swebok2014}. Finally, the number of observed behaviour exercised by the test cases is \emph{finite}: a software testing process is the result of a trade-off between limited resources, schedules, and unlimited rest requirements. Therefore, the \emph{\gls{test suite}} (\ie the set of test cases) has to be properly selected in order to satisfy this trade-off using \emph{\gls{selection criteria}}.
+
+The software testing process itself may be implemented in various ways. Tretmans~\cite{Tretmans2004,Utting2007} defines a typology of software testing processes based on three dimensions: the characteristic being tested, the scale of the SUT, and the information used to select test cases.
+
+\paragraph{Characteristic being tested:} 
+%
+The most common characteristic being tested is the functionality (\emph{functional testing}), which aims at checking that a SUT produces a correct output for a given input. Other characteristics includes (but are not limited to) robustness (\emph{robustness testing}), which aims at checking that the SUT can resist to invalid conditions in its environment (\eg wrong inputs, hardware failures, network failures, other systems failures, \etc); performance (\emph{performance testing}), which aims at checking that the SUT can resist heavy loads; usability (\emph{usability testing}), which focuses on user interfaces problems; security (\emph{security testing}), which aims at checking that the system is not vulnerable to malicious users; \etc
+ 
+\paragraph{Scale of the SUT:} 
+%
+It indicates which parts of the system are considered during the execution of each test case: \emph{unit testing} focuses on single units at a time (\eg a single method, a single function, a single class, \etc); \emph{component testing} tests each part of the system separately, while \emph{integration testing} checks that the different components work together correctly; finally, \emph{system testing} considers the whole system to perform testing.
+
+\paragraph{Information used to select test cases:} 
+%
+Information may be either \emph{white box} or \emph{black box}. White box testing processes use the source code as input. They allow one to define selection criteria on the source code of the application: \eg statement coverage requires that each statement is executed at least once by one test case of the test suite. Black box testing processes will use the requirements of the SUT as input. In this case, the source code is not accessible and selection criteria are specified over the requirements: \eg input domain coverage requires to split the input domain in equivalence classes and to design test cases that will use at least one element of each class.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model-based testing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+

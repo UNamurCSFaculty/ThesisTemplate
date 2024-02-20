@@ -1,0 +1,74 @@
+
+
+%\begin{tabular}{l r c c c c c c  c c c  c c c  c c c }
+%\hline
+%% Titles
+%\multicolumn{2}{r}{ } & \multicolumn{15}{c}{\textbf{Actions dissimilarity distance}} \\
+%% Selection criteria
+%\multicolumn{2}{r}{ } & \multicolumn{3}{c}{\textbf{Hamming}} & \multicolumn{3}{c}{\textbf{Jaccard}} & \multicolumn{3}{c}{\textbf{Dice}} & \multicolumn{3}{c}{\textbf{Antidice}} &  \multicolumn{3}{c}{\textbf{Levenshtein}}\\
+%% Mul and Avg
+%& \textit{t} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} & \textit{Avg.} & \textit{Mul.} &  \textit{Sing.} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} \\ 
+%\hline
+%% Values
+% & \textit{1} & 0.688 & 0.662 & 0.690 & 0.673 & 0.705 & 0.690 & 0.693 & 0.709 & 0.690 & 0.711 & 0.692 & 0.668 & 0.691 & 0.722 & 0.691 \\
+%\textbf{Loc.} & \textit{2} & 0.674 & 0.699 & 0.705 & 0.679 & 0.673 & 0.684 & 0.667 & 0.689 & 0.670 & 0.688 & 0.690 & 0.659 & 0.666 & 0.662 & 0.677\\
+%\textbf{sort} & \textit{10} & 0.702 & 0.681 & 0.661 & 0.721 & 0.685 & 0.700 & 0.720 & 0.669 & 0.679 & 0.667 & 0.674 & 0.651 & 0.691 & 0.681 & 0.696 \\
+% & \textit{100} & 0.667 & 0.693 & 0.672 & 0.672 & 0.720 & 0.713 & 0.691 & 0.703 & 0.678 & 0.696 & 0.685 & 0.655 & 0.655 & 0.678 & 0.687 \\
+% & \textit{1} & 0.736 & 0.710 & 0.724 & 0.694 & 0.697 & 0.727 & 0.695 & 0.683 & 0.710 & 0.666 & 0.672 & 0.699 & 0.684 & 0.693 & 0.717 \\
+%\textbf{Glob.} & \textit{2} & 0.711 & 0.708 & 0.755 & 0.722 & 0.718 & 0.715 & 0.723 & 0.670 & 0.729 & 0.677 & 0.705 & 0.728 & 0.708 & 0.687 & 0.733 \\
+%\textbf{sort} & \textit{10} & 0.740 & 0.733 & 0.804 & 0.723 & 0.696 & 0.730 & 0.690 & 0.683 & 0.738 & 0.701 & 0.692 & 0.746 & 0.701 & 0.714 & 0.771 \\
+% & \textit{100} & 0.794 & 0.800 & 0.831 & 0.747 & 0.729 & 0.756 & 0.750 & 0.714 & 0.755 & 0.747 & 0.740 & 0.758 & 0.747 & 0.730 & 0.781 \\	
+%\hline
+%\multicolumn{2}{l}{\textbf{All-act. crit.}}	& \multicolumn{15}{l}{0.771} \\
+%\multicolumn{2}{l}{\textbf{Rand. crit.}}	& \multicolumn{15}{l}{0.706}  \\
+%\end{tabular}
+
+
+\begin{small}
+\begin{tabularx}{0.98\textwidth}{X r  c c c  c c c  c c c}
+%\begin{tabular}{l r  c c c  c c c  c c c}
+\hline
+% Selection criteria
+\multicolumn{2}{r}{} & \multicolumn{3}{c}{\textbf{Hamming}} & \multicolumn{3}{c}{\textbf{Jaccard}} & \multicolumn{3}{c}{\textbf{Dice}} \\
+% Mul and Avg
+& \textit{t} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} \\ 
+\hline
+% Values
+ 				& \textit{1} & 0.688 & 0.662 & 0.690 & 0.673 & 0.705 & 0.690 & 0.693 & 0.709 & 0.690 \\
+\textbf{Loc.}	& \textit{2} & 0.674 & 0.699 & 0.705 & 0.679 & 0.673 & 0.684 & 0.667 & 0.689 & 0.670 \\
+\textbf{sort}	& \textit{10} & 0.702 & 0.681 & 0.661 & 0.721 & 0.685 & 0.700 & 0.720 & 0.669 & 0.679 \\
+				& \textit{100} & 0.667 & 0.693 & 0.672 & 0.672 & 0.720 & 0.713 & 0.691 & 0.703 & 0.678 \\
+ 				& \textit{1} & 0.736 & 0.710 & 0.724 & 0.694 & 0.697 & 0.727 & 0.695 & 0.683 & 0.710 \\
+\textbf{Glob.}	& \textit{2} & 0.711 & 0.708 & 0.755 & 0.722 & 0.718 & 0.715 & 0.723 & 0.670 & 0.729 \\
+\textbf{sort}	& \textit{10} & 0.740 & 0.733 & 0.804 & 0.723 & 0.696 & 0.730 & 0.690 & 0.683 & 0.738 \\
+				& \textit{100} & 0.794 & 0.800 & 0.831 & 0.747 & 0.729 & 0.756 & 0.750 & 0.714 & 0.755 \\
+\hline
+\end{tabularx}
+%\end{tabular}
+
+\begin{tabular}{l r  c c c  c c c}
+ % Selection criteria
+\multicolumn{2}{r}{ } & \multicolumn{3}{c}{\textbf{Antidice}} &  \multicolumn{3}{c}{\textbf{Levenshtein}}  \\
+% Mul and Avg
+& \textit{t} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.} & \textit{Avg.} & \textit{Mul.} & \textit{Sing.}\\	
+\hline
+% Values
+              & \textit{1} 	& 0.711 & 0.692 & 0.668 & 0.691 & 0.722 & 0.691 \\
+\textbf{Loc.} & \textit{2} 	& 0.688 & 0.690 & 0.659 & 0.666 & 0.662 & 0.677 \\
+\textbf{sort} & \textit{10} 	& 0.667 & 0.674 & 0.651 & 0.691 & 0.681 & 0.696 \\
+              & \textit{100}	& 0.696 & 0.685 & 0.655 & 0.655 & 0.678 & 0.687 \\
+              & \textit{1} 	& 0.666 & 0.672 & 0.699 & 0.684 & 0.693 & 0.717 \\
+\textbf{Glob.}& \textit{2} 	& 0.677 & 0.705 & 0.728 & 0.708 & 0.687 & 0.733 \\
+\textbf{sort} & \textit{10} 	& 0.701 & 0.692 & 0.746 & 0.701 & 0.714 & 0.771 \\
+              & \textit{100}	&  0.747 & 0.740 & 0.758 & 0.747 & 0.730 & 0.781  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{c c}
+\textbf{All-action}	& \textbf{Random}	\\
+\hline
+ 0.771 & 0.706 \\
+\hline
+\end{tabular}
+
+\end{small}

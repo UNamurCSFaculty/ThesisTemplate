@@ -1,0 +1,424 @@
+
+In the following sections, we define mutation operators and FMM mutation operators, inspired from Fabbri et al. \cite{Fabbri1999b}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{State missing (SMI)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Removes a random state $s_i \not = i$ (except initial state). 
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\neg smi_{s1} \wedge \gamma_1$} (s1)
+        (s1) edge [bend right=70] node [above] {c/$\gamma_2$} (s0) 
+         	 edge [loop below] node {b/$\neg smi_{s1} \wedge  \gamma_3$} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wrong initial state (WIS)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Modifies the start state of the transition system to another random state. 
+
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[state] (s0)				 {$0$};
+  \node[initial,state,initial text=]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge [bend left] node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial  text=$\neg wis_{s0}$] (s0)				 {$0$};
+  \node[initial,state,initial text=$wis_{s0}$]       (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge [bend left] node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0) 
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Action exchange (AEX)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Modifies an action on a transition and replace it by another action.
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {\textbf{b}} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend right=70] node [above] {c/$\neg aex_{s1} \wedge \gamma_2$} (s0) 
+		     edge [bend left] node {b/$aex_{s1}\wedge\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Action missing (AMI)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Removes the actions from a transition.
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend right=70] node [above] {c/$\neg ami_{s1} \wedge \gamma_2$} (s0) 
+		     edge [bend left] node {/$ami_{s1} \wedge \gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transition missing (TMI)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Removes a transition from the system.
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\neg tmi_{s1} \wedge \gamma_3$} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transition add (TAD)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Adds a transition to the system by randomly picking up two states and an action. 
+Note: this corresponds to the event extra operator in \cite{Fabbri1999b}. Adding an action without adding a transition with this action has no sense since it can not be detected without being fired.
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+     			 edge [bend left] node {\textbf{b}} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+				  edge [bend left] node {\textbf{b}/$tad_{s0}$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transition destination exchange (TDE)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Changes the destination of a transition to the system by randomly picking up another state in the system.
+
+%------------------------------------
+\subsection{Enumerative approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+	\textbf{Input:} $\lts$ & \textbf{Output:} $\lts_m$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [loop below] node {b} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a} (s1)
+        (s1) edge [bend left] node {c} (s0)
+         	 edge [bend right] node [swap] {b} (s0);
+\end{tikzpicture}
+	\\
+\end{tabular}
+
+
+%------------------------------------
+\subsection{FMM approach}
+%------------------------------------
+
+\begin{tabular}{c c}
+			\textbf{Input:} $\fts_{\fmm}$ & \textbf{Output:} $\fts'_{\fmm}$ \\
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\gamma_3$} (s1);
+\end{tikzpicture}
+	& 
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm]
+  \node[initial,state,initial text=] (s0)				 {$0$};
+  \node[state]         (s1) [right of=s0] {$s_1$};
+
+  \path[->] (s0)  edge node {a/$\gamma_1$} (s1)
+        (s1) edge [bend left] node {c/$\gamma_2$} (s0)
+         	 edge [loop below] node {b/$\neg tde_{s1} \wedge \gamma_3$} (s1)
+          	 edge [bend right] node [swap] {b/$tde_{s1} \wedge \gamma_3$} (s0);
+\end{tikzpicture}
+	\\
+\end{tabular}
