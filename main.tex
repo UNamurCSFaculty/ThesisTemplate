@@ -1,0 +1,194 @@
+\documentclass{style/umemoir}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                       META DATA                                        %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\hypersetup{
+	pdfauthor={First Name LAST NAME}, % TODO
+	pdfsubject={},
+	pdftitle={Title}, % TODO
+	pdfkeywords={keyword1, keyword 2}, % TODO
+}
+
+\TitlePart{Title} % TODO
+\author{First Name LAST NAME} % TODO
+%\Supervisors{First Name LAST NAME} % TODO
+\CenterResearch{PReCISE Research Center}
+\Jury{Title First Name LAST NAME}{External Reviewer}{University of City, Country} % TODO
+\Jury{Title First Name LAST NAME}{External Reviewer}{University of City, Country} % TODO
+\Jury{Title First Name LAST NAME}{Internal Reviewer}{University of City, Country} % TODO
+\Jury{Title First Name LAST NAME}{Internal Reviewer}{University of City, Country} % TODO
+\Jury{Title First Name LAST NAME}{President}{University of City, Country} % TODO
+\Jury{Title First Name LAST NAME}{Co-Supervisor}{University of City, Country} % TODO
+\Jury{Title First Name LAST NAME}{Supervisor}{University of City, Country} % TODO
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                     CONFIGURATIONS                                     %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+%%% GLOSSARY %%%
+
+\makeglossaries
+\input{resources/glossary}
+
+%%% INDEX %%%
+
+\makeindex[columns=2, options= -s style/index.ist, intoc]
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                        DOCUMENT                                        %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\begin{document}
+
+%%% TITLE PAGE %%%
+
+\MyTitlePage
+
+\frontmatter % Lower case Roman numeral page numbering
+
+%%% PUN %%%
+
+\input{resources/presse_universitaire_namur}
+
+%%% CITATION %%%
+
+\input{resources/citation}
+
+%%% ABSTRACT %%%
+
+\chapter*{Abstract}
+\input{chapters/0_abstract}
+
+\chapter*{R\'esum\'e}
+\input{chapters/0_resume}
+
+%%% ACKNOWLEDGEMENTS %%%
+
+\chapter*{Acknowledgements}
+\input{chapters/0_acknowledgments}
+
+%%% CONTENTS %%%
+
+\cleardoublepage
+\setcounter{tocdepth}{1}
+\tableofcontents
+\settocdepth{section}
+
+%%% PART 1 : PREFACE %%%
+
+\mainmatter % Arabic numeral page numbering
+
+\part{Preface}
+\label{part:preface}
+
+%%% INTRODUCTION %%%
+
+\chapter{Introduction}
+\label{chapter:introduction}
+\input{chapters/1_introduction}
+
+%%% BACKGROUND %%%
+
+\chapter{Background}
+\label{chapter:background}
+%\input{chapters/X_chapter}
+
+%%% STATE OF THE ART %%%
+
+\chapter{State of the art}
+\label{chapter:state_of_the_art}
+%\input{chapters/X_chapter}
+
+%%% PART 2 : CONTRIBUTIONS %%%
+
+\part{Contributions}
+\label{part:contribution}
+
+%%% CHAPTER %%%
+
+\label{chapter:chapter}
+\chapter{Chapter}
+\input{chapters/X_chapter}
+
+%%% PART 3 : POSTFACE %%%
+
+\part{Postface}
+\label{part:postface}
+
+%%% CHAPTER %%%
+
+\chapter{Chapter}
+\label{chapter:chapter}
+%\input{chapters/X_chapter}
+
+%%% CONCLUSION %%%
+
+\chapter{Conclusion}
+\label{chapter:conclusion}
+\input{chapters/X_conclusion}
+
+%%% PART 4 : APPENDIX %%%
+
+\part{Appendices}
+\label{part:appendices}
+
+\begin{appendices}
+
+\chapter{Appendix 1}
+
+\end{appendices}
+
+%\backmatter
+
+%%% LIST OF ALGORITHMS %%%
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listalgorithmname}
+\listofalgorithms
+
+%%% LIST OF FIGURES %%%
+
+\cleardoublepage
+\listoffigures
+
+%%% LIST OF LISTING %%%
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Listings}
+\lstlistoflistings
+
+%%% LIST OF TABLES %%%
+
+\cleardoublepage
+\listoftables
+
+%%% GLOSSARY & ACRONYMS %%%
+
+\cleardoublepage
+\setglossarystyle{long}
+\printglossaries
+\section*{}
+
+%%% INDEX %%%
+
+\markboth{Index}{Index} % Set header titles
+\cleardoublepage
+\makeatletter
+\let\ps@plain\ps@rulednohead % Apply style without header
+\makeatother
+\clearpage
+\printindex
+
+%%% BIBLIOGRAPHY %%%
+
+\cleardoublepage
+\bibliographystyle{apalike}
+%\bibliographystyle{plain}
+%\bibliographystyle{plainnat}
+\bibliography{resources/bibliography}
+
+\end{document}

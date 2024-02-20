@@ -1,0 +1,805 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                            CHAPTER                                     %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+% %%% CHAPTER TABLE OF CONTENTS %%%
+
+\startcontents
+\printcontents{ }{1}{}
+
+\newpage
+
+% TODO
+
+%%% SECTIONS %%%
+
+\section{Sections}\label{section:section_1}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+\lipsum
+
+\newpage
+
+%%% TEXT %%%
+
+\section{Text}
+
+This is a paragraph.\\This is another paragraph.
+
+\textbf{This is a bold paragraph}.
+
+\textit{This is an italic paragraph}.
+
+\textsc{This is a paragraph with capital letters.}
+
+\newpage
+
+This is the first paragraph.
+
+\vspace{1.5cm}
+This is a paragraph with a vertical space of 1.5cm around.
+\vspace{1.5cm}
+
+This is a paragraph with a small vertical space after.
+
+\smallbreak
+
+This is a paragraph with medium vertical space after.
+
+\medbreak
+
+This is a paragraph with large vertical space after.
+
+\bigbreak
+
+This is the last paragraph.
+
+\newpage
+
+\paragraph{This is a paragraph with a small vertical space after.}
+
+\smallskip
+
+\paragraph{This is a paragraph with medium vertical space after.}
+
+\medskip
+
+\paragraph{This is a paragraph with large vertical space after.}
+
+\bigskip
+
+\paragraph{This is the last paragraph.}
+
+\newpage
+
+\textcolor{red}{Automatic hyphenation}
+
+Maison voiture lit table chaise chien chat fleur journal tasse bic punaise  anticonstitutionnellement.
+
+\medbreak
+
+\textcolor{red}{Custom hyphenation in text}
+
+Maison voiture lit table chaise chien chat fleur journal tasse bic punaise anti\-constitutionnellement.
+
+\medbreak
+
+\textcolor{red}{Custom hyphenation configured in style}
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa maxime.
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa maxime.
+
+\medbreak
+
+\textcolor{red}{Incesable space (without)}
+
+Anticonstitutionnellement interdépartementalisation dichlorodiphényltrichloroéthane été.
+
+\medbreak
+
+\textcolor{red}{Incesable space (with)}
+
+Anticonstitutionnellement interdépartementalisation dichlorodiphényltrichloroéthane~été.
+
+\newpage
+
+``This is a citation''.
+
+\newpage
+
+%%% CHARACTERS %%%
+
+\section{Characters}
+Short dash : - \\
+Middle dash : -- \\
+Long dash : --- \\
+
+\newpage
+
+%%% HYPERLINKS %%%
+
+\section{Hyperlinks}
+\url{https://fr.wikipedia.org/} \\
+\href{https://fr.wikipedia.org/}{This is a clickable link towards Wikipedia}
+
+\newpage
+
+%%% ENUMERATIONS %%%
+
+\section{Enumerations}
+
+\begin{enumerate}[label=\Alph*.]
+    \item Item \label{item:item_A}
+    \item Item
+    \item Item
+\end{enumerate}
+\bigbreak
+
+\begin{enumerate}[label=\Alph*)]
+    \item Item
+    \item Item
+    \item Item
+\end{enumerate}
+\bigbreak
+
+\begin{enumerate}
+    \item Item
+    \item Item
+    \item Item
+\end{enumerate}
+\bigbreak
+
+\begin{itemize}
+    \item[$\circ$] Item
+    \item[$\bigcirc$] Item
+    \item[$\blacksquare$] Item
+    \item[$\square$] Item
+\end{itemize}
+\bigbreak
+\begin{itemize}
+    \item Item
+    \item Item
+    \item Item
+\end{itemize}
+\bigbreak
+
+\begin{enumerate}
+
+    \item Item with content
+    
+Content. 
+
+    \item Item with content
+    
+Content. 
+
+    \item Item with content
+    
+Content. 
+
+\end{enumerate}
+\bigbreak
+
+\begin{enumerate}
+    \item Item
+    \item Item
+    \item Item
+\end{enumerate}
+The following enumeration resumes the previous one:
+\begin{enumerate}[resume]
+    \item Item
+    \item Item
+    \item Item
+\end{enumerate}
+\bigbreak
+
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+        \begin{itemize}
+            \item Sub-item 1.1
+            \item Sub-item 1.2
+            \item Sub-item 1.3
+        \end{itemize}
+    \item Item 3
+\end{itemize}
+\bigbreak
+
+\begin{basedescript}{%
+  \desclabelstyle{\multilinelabel}
+  \desclabelwidth{3cm}}
+
+\item[This is an item] \lipsum[25] 
+
+\end{basedescript}
+
+\newpage
+
+%%% TABLES %%%
+
+\section{Tables}
+
+Long table possibly on multiple pages:
+
+\begin{longtable}{|l|l|l|l|}
+
+\caption{A long table}\label{table:long_table}\\
+
+\hline
+
+\multicolumn{4}{|c|}{{\textbf{Title}}} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Subtitle}} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} & 
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} \\ \hline
+
+\end{longtable}
+
+\newpage
+
+Table with enumerations : \\
+
+\begin{longtable}{|l|l|l|l|}
+    
+\caption{A table with enumerations}\label{table:table_enumerations}\\
+
+\hline
+
+\multicolumn{4}{|c|}{{\textbf{Title}}} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Subtitle}} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}}
+\begin{minipage}{5cm}
+    \medskip
+    \begin{itemize}
+        \item List item 1
+        \item List item 2
+    \end{itemize}
+    \medskip
+\end{minipage}\\
+\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}}
+\begin{minipage}{5cm}
+    \medskip
+    \begin{itemize}
+        \item List item 1
+        \item List item 2
+    \end{itemize}
+    \medskip
+\end{minipage}\\
+\end{tabular} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}} Cell \end{tabular} &
+\begin{tabular}[c]{@{}l@{}}
+\begin{minipage}{5cm}
+    \medskip
+    \begin{itemize}
+        \item List item 1
+        \item List item 2
+    \end{itemize}
+    \medskip
+\end{minipage}\\
+\end{tabular} \\ \hline
+
+\end{longtable}
+
+\newpage
+
+Stylished table:
+
+\begin{table}[h]
+  \begin{center}
+    
+    \newcolumntype{A}{>{\centering\arraybackslash} m{0.4\linewidth} }
+    \newcolumntype{B}{>{\centering\arraybackslash} m{0.1\linewidth} }
+    
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{0pt}
+    
+    \caption{A stylished table}\label{table:stylished_table}
+    
+    \begin{tabular}{ A B B B B }
+      \toprule
+       &
+       \multicolumn{4}{c}{A multicolumn} \\
+      &
+      A &
+      B &
+      C &
+      D \\
+      \midrule  
+      1 & 2 & 3 & 4 & 5 \\ % Line
+      1 & 2 & 3 & 4 & 5 \\ % Line
+      1 & 2 & 3 & 4 & 5 \\ % Line
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\newpage
+
+%%% GRAPHICS %%%
+
+\section{Graphics}
+
+\begin{figure}[H]
+    \centering
+    \includesvg[width=0.5\textwidth,angle=90]{logo_university_namur.svg}
+    \caption{Figure SVG}
+    \label{figure:figure_svg}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth,center]{logo_computer_science_faculty.png}
+    \caption{Figure PNG}
+    \label{figure:figure_png}
+\end{figure}
+
+\newpage
+
+%%% ALGORITHMS %%%
+
+\section{Algorithms}
+
+\begin{algorithm}
+\caption{An algorithm for computing} \label{algorithm:algorithm_1}
+\begin{algorithmic}[1] % [1] for line numbers
+\Procedure{compute}{$x,y,z \gets 0$}
+    \Require Input data
+    \Ensure Output result
+    \State $a \gets x$
+    \State $b \gets y$
+    \State $c \gets \emptyset$
+    \ForAll{$item_a \in a$}
+        \State $d \gets 0$
+        \ForAll{$item_b \in b$}
+            \If{$item_a$ = $item_b$}
+                \State $d \gets d + 1$
+                \State $c \gets c \cup \{ item_a \} $
+            \Else
+                \State $d \gets d + 0$
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $c,d$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+% Documentation : https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/algpseudocodex/algpseudocodex.pdf
+
+\newpage
+
+%%% LISTINGS %%%
+
+\section{Listings}
+
+\begin{lstlisting}[caption={This is a java code}\label{listing:listing_1},language=Java] 
+public class Java {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+\end{lstlisting}
+
+\newpage
+
+%%% REFERENCES %%%
+
+\section{References}
+Section : \ref{section:section_1} \\
+Graphics : \ref{figure:figure_svg} \\
+Item : \ref{item:item_A} \\
+Bibliography reference : \cite{lamport1991latex} \\
+Bibliography full entry : \bibentry{lamport1991latex}
+
+\newpage
+
+%%% FOOTNOTE %%%
+
+\section{Footnote}
+
+This is a sentence containing a footnote \footnote{This is the footnote}.
+
+\newpage
+
+%%% GLOSSARY & ACRONYMS %%%
+
+\section{Glossary and acronyms}
+
+The term "\Gls{latex}" or "\gls{latex}" is defined in the glossary.
+
+The term "\gls{language}" (in plural "\glspl{language}") is defined in the glossary.
+
+The acronym "\acrshort{gcd}" is in short form.
+
+The acronym "\acrlong{gcd}" is in long form.
+
+The acronym "\acrfull{gcd}" is in full form.
+
+The acronym "\gls{gcd}" is used for the first time in the text under the full form and than reused here "\gls{gcd}" in the short form.
+
+\chapter*{New chapter}
+
+The full form of the acronym "\gls{gcd}" is reset in a new chapter and continues his short form after.
+
+\newpage
+
+%%% INDEX %%%
+The term Apple \index{Apple} is in the index.
+
+The term Banana \index{Banana} is in the index.
+
+The term Chocolate \index{Chocolate} is in the index.
+
+The term Dolphin \index{Dolphin} is in the index.
+
+The term Elephant \index{Elephant} is in the index.
+
+The term Forest \index{Forest} is in the index.
+
+The term Galaxy \index{Galaxy} is in the index.
+
+The term Harmony \index{Harmony} is in the index.
+
+The term Iceberg \index{Iceberg} is in the index.
+
+The term Jellyfish \index{Jellyfish} is in the index.
+
+The term Kangaroo \index{Kangaroo} is in the index.
+
+The term Lemon \index{Lemon} is in the index.
+
+The term Mountain \index{Mountain} is in the index.
+
+The term Notebook \index{Notebook} is in the index.
+
+The term Ocean \index{Ocean} is in the index.
+
+The term Penguin \index{Penguin} is in the index.
+
+The term Quasar \index{Quasar} is in the index.
+
+The term Raindrop \index{Raindrop} is in the index.
+
+The term Sunshine \index{Sunshine} is in the index.
+
+The term Telescope \index{Telescope} is in the index.
+
+The term Umbrella \index{Umbrella} is in the index.
+
+The term Vanilla \index{Vanilla} is in the index.
+
+The term Waterfall \index{Waterfall} is in the index.
+
+The term Xenon \index{Xenon} is in the index.
+
+The term Yoga \index{Yoga} is in the index.
+
+The term Zephyr \index{Zephyr} is in the index.
+
+The term \LaTeX \index{Latex} is in the index.
+
+The term Avocado \index{Avocado} is in the index.
+
+The term Blossom \index{Blossom} is in the index.
+
+The term Carousel \index{Carousel} is in the index.
+
+The term Dandelion \index{Dandelion} is in the index.
+
+The term Enigma \index{Enigma} is in the index.
+
+The term Flamingo \index{Flamingo} is in the index.
+
+The term Gargoyle \index{Gargoyle} is in the index.
+
+The term Halcyon \index{Halcyon} is in the index.
+
+The term Iridescent \index{Iridescent} is in the index.
+
+The term Jacaranda \index{Jacaranda} is in the index.
+
+The term Kaleidoscope \index{Kaleidoscope} is in the index.
+
+The term Labyrinth \index{Labyrinth} is in the index.
+
+The term Magnolia \index{Magnolia} is in the index.
+
+The term Nebula \index{Nebula} is in the index.
+
+The term Opulent \index{Opulent} is in the index.
+
+The term Pinnacle \index{Pinnacle} is in the index.
+
+The term Quasar \index{Quasar} is in the index.
+
+The term Radiant \index{Radiant} is in the index.
+
+The term Serendipity \index{Serendipity} is in the index.
+
+The term Tranquil \index{Tranquil} is in the index.
+
+The term Utopia \index{Utopia} is in the index.
+
+The term Velvet \index{Velvet} is in the index.
+
+The term Whimsical \index{Whimsical} is in the index.
+
+The term Xanadu \index{Xanadu} is in the index.
+
+The term Yonder \index{Yonder} is in the index.
+
+The term Zenith \index{Zenith} is in the index.
+
+The term Eclipse \index{Eclipse} is in the index.
+
+The term Firefly \index{Firefly} is in the index.
+
+The term Glisten \index{Glisten} is in the index.
+
+The term Halcyon \index{Halcyon} is in the index.
+
+The term Illusion \index{Illusion} is in the index.
+
+The term Jamboree \index{Jamboree} is in the index.
+
+The term Kismet \index{Kismet} is in the index.
+
+The term Luminous \index{Luminous} is in the index.
+
+The term Melody \index{Melody} is in the index.
+
+The term Nimbus \index{Nimbus} is in the index.
+
+The term Odyssey \index{Odyssey} is in the index.
+
+The term Plenitude \index{Plenitude} is in the index.
+
+The term Quixotic \index{Quixotic} is in the index.
+
+
+%%% CHAPTERS %%%
+
+\chapter{Chapter on same page (1)}
+
+{\let\clearpage\relax\chapter{Chapter on same page (2)}}
+
+\stopcontents
