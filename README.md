@@ -13,6 +13,8 @@ The template is also well-commented to make its handling and understanding easy.
 Finally, the template is accompanied by several layout examples (e.g., tables, listings, algorithms, SVG images, 
 enumeration styles, glossary entry styles, hyphenations, etc.).
 
+[👀 See what it looks like with the PDF preview](Preview.pdf)
+
 ## Disclaimer
 
 **DISCLAIMER!** Keep in mind that this version is a proposal.
