@@ -294,21 +294,22 @@
 \setlength\dlf@normtxtw{\textwidth}
 \def\myhelvetfont{\def\sfdefault{mdput}}
 \newsavebox{\feline@chapter}
-\newcommand\feline@chapter@marker[1][4cm]{%
-\sbox\feline@chapter{%
-\resizebox{!}{#1}{\fboxsep=1pt%
-\colorbox{unamur_fac_info_blue}{\color{white}\bfseries\thechapter}%
+\newcommand\feline@chapter@marker[1][4cm]{
+\sbox\feline@chapter{
+\resizebox{!}{#1}{\fboxsep=1pt
+\colorbox{unamur_fac_info_blue}{\color{white}\bfseries\thechapter} % Blue box chapter number
+%\colorbox{white}{\color{black}\bfseries\thechapter} % White box chapter number
 }}%
-\rotatebox{90}{%
-\resizebox{%
-\heightof{\usebox{\feline@chapter}}+\depthof{\usebox{\feline@chapter}}}%
-{!}{\scshape\so\@chapapp}}\quad%
-\raisebox{\depthof{\usebox{\feline@chapter}}}{\usebox{\feline@chapter}}%
+\rotatebox{90}{
+\resizebox{
+\heightof{\usebox{\feline@chapter}}+\depthof{\usebox{\feline@chapter}}}
+{!}{\scshape\so\@chapapp}}\quad
+\raisebox{\depthof{\usebox{\feline@chapter}}}{\usebox{\feline@chapter}}
 }
-\newcommand\feline@chm[1][4cm]{%
-\sbox\feline@chapter{\feline@chapter@marker[#1]}%
+\newcommand\feline@chm[1][4cm]{
+\sbox\feline@chapter{\feline@chapter@marker[#1]}
 \makebox[0pt][l]{% aka \rlap
-\makebox[1cm][r]{\usebox\feline@chapter}%
+\makebox[1cm][r]{\usebox\feline@chapter}
 }}
 \makechapterstyle{daleif1}{
 \renewcommand\chapnamefont{\normalfont\Large\raggedleft\so}
@@ -325,16 +326,27 @@
 %                                    HEADER AND FOOTER                                   %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 
-\makeheadfootruleprefix{ruled}{\color{unamur_fac_info_blue}}{\color{unamur_fac_info_blue}}
+% Header
+
+\makeheadfootruleprefix{ruled}{\color{black}}{\color{black}}  % Header line color
 \makeheadrule {ruled}{\textwidth}{\normalrulethickness} % Header line
-\makeoddhead {ruled} {} {} {\small\itshape\rightmark} % Section name in small italic
-\makeevenfoot{ruled}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}}{}{} 
-\makeoddfoot{ruled}{}{}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}}
+\makeoddhead {ruled} {} {} {\small\itshape\rightmark} % Header format odd page
+
+% Page footer
+
+%\makeevenfoot{ruled}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}}{}{} % Blue box even page number
+%\makeoddfoot{ruled}{}{}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}} % Blue box odd page number
+\makeevenfoot{ruled}{\colorbox{white}{\makebox[1.5em]{\strut\textcolor{black}{\thepage}}}}{}{} % Black even page number
+\makeoddfoot{ruled}{}{}{\colorbox{white}{\makebox[1.5em]{\strut\textcolor{black}{\thepage}}}} % Black odd page number
+
+% Chapter page footer
 
 \makepagestyle{rulednohead}
-\makeheadfootruleprefix{rulednohead}{}{\color{unamur_fac_info_blue}}
-\makeevenfoot{rulednohead}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}}{}{} 
-\makeoddfoot{rulednohead}{}{}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}}
+\makeheadfootruleprefix{rulednohead}{}{\color{black}}
+%\makeevenfoot{rulednohead}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}}{}{} % Blue even page number
+%\makeoddfoot{rulednohead}{}{}{\colorbox{unamur_fac_info_blue}{\makebox[1.5em]{\strut\textcolor{white}{\thepage}}}} % Blue odd page number
+\makeevenfoot{rulednohead}{\colorbox{white}{\makebox[1.5em]{\strut\textcolor{black}{\thepage}}}}{}{} % Black even page number
+\makeoddfoot{rulednohead}{}{}{\colorbox{white}{\makebox[1.5em]{\strut\textcolor{black}{\thepage}}}} % Black odd page number
 
 \makepsmarks {ruled}{
 	\nouppercaseheads
@@ -363,7 +375,7 @@
 
 \setlist{nolistsep}
 \renewenvironment{description}{%
-\begin{itemize}[font=\bfseries\color{unamur_fac_info_blue}]%
+\begin{itemize}[font=\bfseries\color{black}]%
 %\addtolength{\leftmargin}{5cm}
 \addtolength{\itemindent}{2cm}
 %
@@ -382,7 +394,7 @@
 \makeatletter
 \DeclareRobustCommand{\em}{%
   \@nomath\em \if b\expandafter\@car\f@series\@nil
-  \normalfont \else \bfseries \color{unamur_fac_info_blue} \fi}
+  \normalfont \else \bfseries \color{black} \fi}
 \makeatother
 
 
@@ -392,8 +404,8 @@
 \hypersetup{
     colorlinks = true,
     linkcolor = black,
-    urlcolor = unamur_fac_info_blue,
-    citecolor= unamur_fac_info_blue
+    urlcolor = black,
+    citecolor= black
 }
 
 % %%% tt family %%%
@@ -402,13 +414,13 @@
 
 % %%% Graphics %%%
 
-\graphicspath{{../}{figures/}}  
+\graphicspath{{../}{figures/}}
 
 % %%% Enumerations %%%
 
 \newcommand{\sbt}{\,\begin{picture}(-1,1)(-1,-3)\circle*{4}\end{picture}\ }
 \renewcommand{\labelitemi}{${\color{black}\sbt}$}
-\renewcommand{\labelenumi}{\color{black}(\theenumi)} 
+\renewcommand{\labelenumi}{\color{black}(\theenumi)}
 
 \setdefaultenum{(i)}{(a)}{}{}
 
@@ -488,6 +500,8 @@ Rempart de la Vierge, 13\\
 B - 5000 Namur (Belgique)\\
 \\
 Toute reproduction d'un extrait quelconque de ce livre, hors des limites restrictives prévues par la loi, par quelque procédé que ce soit, et notamment par photocopie ou scanner, est strictement interdite pour tous pays.\\
+\\
+Any copy, partial or complete, of this book, apart beyond restrictive limits stated by the law, by any way, notably printed or electronic copy, is formally forbidden for all countries.\\
 \\
 Imprimé en Belgique\\
 ISBN :  % TODO \\
