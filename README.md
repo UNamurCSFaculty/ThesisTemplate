@@ -1,6 +1,6 @@
 # PhD thesis template for Computer Science Faculty of the University of Namur
 
-![UNamur Computer Science Faculty](https://avatars.githubusercontent.com/u/26461656?s=200&v=4)
+![UNamur Computer Science Faculty](figures/logo_computer_science_faculty.png)
 
 ## Description
 
@@ -93,6 +93,8 @@ Authors:
    * [Fabian Gilson](https://researchportal.unamur.be/fr/persons/fgilson)                                                                 
    * [Nicolas Genon](https://researchportal.unamur.be/fr/persons/nicolas-genon)
 
-Contributors:                                                                          
+Contributors:
+   * [Xavier Devroey](https://researchportal.unamur.be/fr/persons/xdevroey) 
    * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
    * [Maxime André](https://researchportal.unamur.be/fr/persons/maxime-andr%C3%A9)
+   * ...
