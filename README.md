@@ -94,7 +94,8 @@ Authors:
    * [Nicolas Genon](https://researchportal.unamur.be/fr/persons/nicolas-genon)
 
 Contributors:
-   * [Xavier Devroey](https://researchportal.unamur.be/fr/persons/xdevroey) 
+   * [Xavier Devroey](https://researchportal.unamur.be/fr/persons/xdevroey)
+   * [Tony Leclercq](https://researchportal.unamur.be/fr/persons/tolecler)
    * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
    * [Maxime André](https://researchportal.unamur.be/fr/persons/maxime-andr%C3%A9)
    * ...
