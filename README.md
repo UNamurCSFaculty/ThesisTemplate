@@ -98,4 +98,5 @@ Contributors:
    * [Tony Leclercq](https://researchportal.unamur.be/fr/persons/tolecler)
    * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
    * [Maxime André](https://researchportal.unamur.be/fr/persons/maxime-andr%C3%A9)
+   * [Valentin Delchevalerie](https://researchportal.unamur.be/fr/persons/vdelchev)
    * ...
