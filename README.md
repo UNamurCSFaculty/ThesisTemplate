@@ -55,9 +55,23 @@ Please use the issues and pull requests mechanisms.
 * *What do I need to pay attention to during final proofreading before printing?*
 
   * During final proofreading, in addition to checking content and spelling, pay attention to layout and colors. 
-    Check that no content exceeds the defined margins or is misplaced. Also check that black and white pages do not 
-    contain small colored symbols or stylistic elements. Also, don't forget that a color page costs around six times 
-    as much as a black-and-white page.
+    Check that no content exceeds the defined margins or is misplaced. Also, check that black and white pages do not 
+    contain small colored symbols or stylistic elements. Don't forget that a color page costs around six times 
+    as much as a black-and-white page. Please note that it is important to check these elements before sending the PDF
+	version to the printer for print proofing. Once the print proof has been launched, no modifications are permitted on the PDF
+	(not even the correction of a spelling error, a symbol change, a color change, etc.).
+	Any modification will require a new proof, which may take longer.
+
+* *How to select only colored pages to optimize printing costs?*
+  
+  * To optimize the printing price, it's a good idea to specify the pages to be printed only in black & white and the ones in color.
+    In fact, printing all in color by default would be an unnecessary waste of money, as pages filled only with black text would be printed
+    under the color tarif package. Since the budget for printing is limited, this would considerably reduce the number of copies that can
+    be printed. As a reminder, the price of a color page is six times higher than the price of a black & white page. To facilitate this task
+    of selecting color pages only and avoid manual counting (with the risk of making mistakes), a script has been coded to perform this page
+    selection work automatically. All you have to do is submit the PDF and the script will return, in the correct format, the selection of
+    colored pages (e.g. 1, 5, 12, 14-19, 25-26, 79, ...). The script is located at `/utils/return_color_pages.py`. Instructions for executing
+    it are detailed there.
   
 * *Do I have to create my own cover page?*
 
