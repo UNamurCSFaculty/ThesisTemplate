@@ -126,7 +126,6 @@
 \usepackage[table]{xcolor} % https://ctan.org/pkg/xcolor / Colors
 \usepackage{color} % https://ctan.org/pkg/color / Colors
 \usepackage{colortbl} % https://ctan.org/pkg/colortbl / Colors
-\usepackage[skins]{tcolorbox} % https://ctan.org/pkg/tcolorbox / Colors
 
 % %%% Table %%%
 
@@ -136,6 +135,10 @@
 \usepackage{longtable} % https://www.ctan.org/pkg/longtable / Table on multiples pages
 \usepackage{tabu} %  https://www.ctan.org/pkg/tabu / Table
 \usepackage{booktabs}
+
+% %%% Boxes %%%
+
+\usepackage[skins,most]{tcolorbox} % https://ctan.org/pkg/tcolorbox / Coloured text boxes
 
 % %%% Graphics %%%
 
@@ -188,7 +191,6 @@
 \definecolor{unamur_green}{HTML}{69be28} % UNamur green
 \definecolor{unamur_fac_info_blue}{HTML}{003366} % Fac Info blue
 \definecolor{unamur_grey}{HTML}{616365} % UNamur grey
-\definecolor{unamur_light_grey}{rgb}{.91,.96,.100} % UNamur light grey
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                       TITLE PAGE                                       %
@@ -450,6 +452,21 @@ escapeinside={(*@}{@*)}}
 \preto\chapter{\glsresetall}
 
 \setabbreviationstyle[acronym]{long-short}
+
+% %%% Boxes %%%
+
+\tcbset{textmarker/.style={
+    enhanced,
+    parbox=false,boxrule=0mm,boxsep=0mm,arc=0mm,
+    outer arc=0mm,left=5mm,right=5mm,top=5pt,bottom=5pt,
+    toptitle=1mm,bottomtitle=1mm}}
+
+\newtcolorbox{highlightsBox}{textmarker,
+    borderline west={6pt}{0pt}{black},
+    colback=unamur_grey!5!white}
+
+\newcommand{\highlights}[1]{\begin{highlightsBox} \textbf{Highlights}\newline #1 \end{highlightsBox}}
+        
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                        COMMANDS                                        %
