@@ -189,7 +189,12 @@
 
 \definecolor{black}{HTML}{000000}
 \definecolor{unamur_green}{HTML}{69be28} % UNamur green
-\definecolor{unamur_fac_info_blue}{HTML}{003366} % Fac Info blue
+\definecolor{unamur_fac_info_blue}{HTML}{293071} % Fac Info blue
+\definecolor{unamur_fac_philo_blue}{HTML}{005C87} % Fac Philo blue
+\definecolor{unamur_fac_med_blue}{HTML}{00A9C8} % Fac Med blue
+\definecolor{unamur_fac_emcp_blue}{HTML}{008D9A} % Fac EMCP (management) blue
+\definecolor{unamur_fac_law_purple}{HTML}{522C81} % Fac Droit purple
+\definecolor{unamur_fac_science_purple}{HTML}{80368A} % Fac science purple
 \definecolor{unamur_grey}{HTML}{616365} % UNamur grey
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
