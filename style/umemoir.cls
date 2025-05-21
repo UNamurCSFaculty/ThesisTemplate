@@ -188,14 +188,15 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 
 \definecolor{black}{HTML}{000000}
-\definecolor{unamur_green}{HTML}{69be28} % UNamur green
+\definecolor{unamur_green}{HTML}{58AB46} % UNamur green
 \definecolor{unamur_fac_info_blue}{HTML}{293071} % Fac Info blue
 \definecolor{unamur_fac_philo_blue}{HTML}{005C87} % Fac Philo blue
 \definecolor{unamur_fac_med_blue}{HTML}{00A9C8} % Fac Med blue
 \definecolor{unamur_fac_emcp_blue}{HTML}{008D9A} % Fac EMCP (management) blue
 \definecolor{unamur_fac_law_purple}{HTML}{522C81} % Fac Droit purple
 \definecolor{unamur_fac_science_purple}{HTML}{80368A} % Fac science purple
-\definecolor{unamur_grey}{HTML}{616365} % UNamur grey
+\definecolor{unamur_grey}{HTML}{4A4A52} % UNamur grey
+\definecolor{unamur_grey_sun}{HTML}{67696C} % UNamur grey in the sun
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                       TITLE PAGE                                       %
@@ -281,7 +282,7 @@
         \color{unamur_grey}{University of Namur \\ \vspace*{.5\baselineskip} \CenterResearch}
         \end{minipage}
         \begin{minipage}[c]{.20\textwidth}
-        \hfill\includegraphics[width=1.5cm]{figures/logo_computer_science_faculty.png}
+        \hfill\includesvg[height=1.5cm]{figures/info-color.svg}
         \end{minipage}
         \end{flushleft}}
     \endgroup
