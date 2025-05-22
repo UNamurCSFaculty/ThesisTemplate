@@ -169,11 +169,6 @@
 \usepackage{pdfpages} % https://ctan.org/pkg/pdfpages / PDF
 \usepackage{pdflscape} % https://ctan.org/pkg/pdflscape / Page orientation
 
-% %%% Glossary %%%
-
-\usepackage[toc, acronym, section=chapter]{glossaries} % https://www.ctan.org/pkg/glossaries / Glossary
-\usepackage{glossaries-extra}
-
 % %%% Index %%%
 
 \usepackage{imakeidx} % https://www.ctan.org/pkg/imakeidx / Index
@@ -182,6 +177,11 @@
 
 \usepackage{url} % https://www.ctan.org/pkg/url / URL
 \usepackage[hidelinks]{hyperref} % https://ctan.org/pkg/hyperref / Hyperlinks
+
+% %%% Glossary %%%
+
+\usepackage[toc, acronym, section=chapter]{glossaries} % https://www.ctan.org/pkg/glossaries / Glossary
+\usepackage{glossaries-extra}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                           COLORS                                       %
@@ -328,6 +328,22 @@
 \renewcommand\printchaptertitle[1]{\chaptitlefont\raggedleft ##1\par}
 }
 \chapterstyle{daleif1}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+% %%%                                   Text boxes                                   %%% %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\newcommand{\mybox}[4]{
+    \begin{figure}[H]
+        \centering
+    \resizebox{\textwidth}{!}{%  
+    \begin{tikzpicture}
+        \node[anchor=text,text width=\columnwidth-0.2cm, draw, rounded corners, line width=0.5pt, fill=#3, inner sep=3mm] (big) {\\#4};
+        \node[draw, rounded corners, line width=0.5pt, fill=#2, anchor=west, xshift=4mm, ,scale=1.1] (small) at (big.north west) {\text{  }\bfseries{\textbf{\textcolor{white}{#1}}}\text{  }};
+    \end{tikzpicture}
+    }%
+    \end{figure}
+}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                    HEADER AND FOOTER                                   %
