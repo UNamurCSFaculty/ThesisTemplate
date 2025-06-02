@@ -124,4 +124,6 @@ Contributors:
    * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
    * [Maxime André](https://researchportal.unamur.be/fr/persons/maxime-andr%C3%A9)
    * [Valentin Delchevalerie](https://researchportal.unamur.be/fr/persons/vdelchev)
+   * [Jérôme Fink](https://researchportal.unamur.be/fr/persons/jfink)
+   * [Jules Dejaeghere](https://researchportal.unamur.be/fr/persons/jdejaegh)
    * ...
