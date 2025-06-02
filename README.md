@@ -1,6 +1,6 @@
 # PhD thesis template for Computer Science Faculty of the University of Namur
 
-![UNamur Computer Science Faculty](figures/logo_computer_science_faculty.png)
+<br><img src="figures/cs_faculty_logo.png" height="200px" alt="UNamur Computer Science Faculty">
 
 ## Description
 
