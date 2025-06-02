@@ -24,11 +24,22 @@ Or, you can also adapt this one (see [License](#license)).
 
 ## Getting started
 
-Basically, you have two main options:
+Basically, you have two main options.
 
-* You can download the zip file of the source code and upload it on [Overleaf](https://www.overleaf.com/) in a new 
-  project.
-* Alternatively, you can download the source code and set up your own LaTeX environment on your local host.
+### Overleaf  
+
+1. Download the zip file of the source code: green button at the top **Code** > **Download ZIP** 
+2. Login on [Overleaf](https://www.overleaf.com/)
+3. Use **New project** > **Upload project** and drop the ZIP you downloaded
+
+### Local
+
+1. Download the source code and set up your own LaTeX environment on your local host: `git clone https://github.com/UNamurCSFaculty/ThesisTemplate.git`
+2. Make sure the dependencies are installed, generally you need `pdflatex`, `make` and a TeX distribution (`texlive-full`
+contains all the dependencies needed for this project)
+3. Compile with `make`, this creates the file `main.pdf` and other temporary files 
+4. Clean with `make clean` (this also removes `main.pdf`)
+
 
 Once in the template source code, you can locate and follow the `% TODO` for replacing them with your content.
 
