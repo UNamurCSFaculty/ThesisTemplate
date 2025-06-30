@@ -59,7 +59,7 @@ Please use the issues and pull requests mechanisms.
     e-mail and explain that you would like to publish your thesis. The entire procedure will then be explained to 
     you in reply to this e-mail. [More information](https://terranostra.unamur.be/pun/Auteur/publications/).
   * At the same time, you will be asked to complete [this form for the BUMP deposit](https://unamur.be/bump/depot-these).
-    You can use [this form for extracting the list of your publications](https://www.unamur.be/recherche/pure-1/procedures/publis-format-fnrs) 
+    You can use [this form for extracting the list of your publications](https://terranostra.unamur.be/adre/procedures-pure/creer-liste-publis-FNRS) 
     for helping you in completing the "Article" section asking you to reference the list of your publications that are 
     eventually in your thesis.
   
