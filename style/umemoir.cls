@@ -114,7 +114,8 @@
 % %%% Bibliography %%%
 
 \usepackage{bibentry} \nobibliography* % https://www.ctan.org/pkg/bibentry / Bibliography
-\usepackage[square, sort]{natbib} % https://ctan.org/pkg/natbib / Bibliography
+\usepackage[square, sort]{natbib} % https://ctan.org/pkg/natbib / Bibliography with [Author, YYYY] style
+%\usepackage[round, sort]{natbib} % https://ctan.org/pkg/natbib / Bibliography with (Author, YYYY) style 
 
 % %%% Title %%%
 
