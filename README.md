@@ -126,4 +126,5 @@ Contributors:
    * [Valentin Delchevalerie](https://researchportal.unamur.be/fr/persons/vdelchev)
    * [Jérôme Fink](https://researchportal.unamur.be/fr/persons/jfink)
    * [Jules Dejaeghere](https://researchportal.unamur.be/fr/persons/jdejaegh)
+   * [Yasmine Akaichi](https://researchportal.unamur.be/fr/persons/yakaichi)
    * ...
