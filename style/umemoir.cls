@@ -559,3 +559,18 @@ Dépôt légal: % TODO
  \textbf{#2}}
 \end{flushright}
 }
+
+% %%% Research question text boxes %%%
+% Example usage : \answer{RQ.x}{Research question?}{This is an answer.}
+
+\newcommand{\answer}[4][H]{
+\begin{figure}[#1]
+        \centering
+    \resizebox{\textwidth}{!}{%  
+    \begin{tikzpicture}
+        \node[anchor=text,text width=\columnwidth-0.2cm, draw, rounded corners, line width=0.5pt, fill=unamur_grey!5!white, inner sep=3mm, align=justify] (big) {\begin{flushright}\small #3\end{flushright}\vspace{2mm} #4};
+        \node[draw, rounded corners, line width=0.5pt, fill=black, anchor=west, xshift=4mm, ,scale=1.1] (small) at (big.north west) {\text{  }\bfseries{\textbf{\textcolor{white}{#2}}}\text{  }};
+    \end{tikzpicture}
+    }%
+\end{figure}
+}
