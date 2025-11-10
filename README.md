@@ -43,6 +43,72 @@ contains all the dependencies needed for this project)
 
 Once in the template source code, you can locate and follow the `% TODO` for replacing them with your content.
 
+### Using git submodules for including this template in your own thesis repository
+
+If you are using Git for version control of your thesis, it might be useful to use Git submodules to include this template repository inside your own thesis repository.
+git submodules allow you to include the template repository inside your own thesis repository and keep it up to date when changes are made to the template.
+To add this template as a submodule to your own thesis repository, run the following command in the root of your thesis repository:
+
+```bash
+git submodule add https://github.com/UNamurCSFaculty/ThesisTemplate.git
+```
+
+This will create a new directory called `ThesisTemplate` in your thesis repository containing the template files.
+
+copy the following files and folders from the `ThesisTemplate` submodule to your thesis repository root:
+* `figures/`
+* `chapters/`
+* `main.tex`
+
+In your `main.tex`, apply the following changes to refers to the template files, now in submodule:
+
+<details>
+  <summary>View changes to make</summary>
+
+
+### 1. Document Class Path
+* **Location:** At the **top** of your `main.tex` file (first 2 lines).
+* **Action:** Find the two lines beginning with `\documentclass`. You need to add `ThesisTemplate/` before `style/umemoir` in both lines.
+
+    * **Change:** `style/umemoir`
+    * **To:** `ThesisTemplate/style/umemoir`
+
+### 2. Index Style Path
+* **Location:** In the "CONFIGURATION" section.
+* **Action:** Update the path for the index style sheet (`.ist`) inside the `\makeindex` command.
+
+    * **Before:**
+        ```latex
+        \makeindex[columns=2, options= -s style/index.ist, intoc]
+        ```
+    * **After:**
+        ```latex
+        \makeindex[columns=2, options= -s ThesisTemplate/style/index.ist, intoc]
+        ```
+
+
+### 3. PUN Resource Path
+* **Location:** In the "PUN" section.
+* **Action:** Update the path for the `\input` command.
+
+    * **Before:**
+        ```latex
+        \input{resources/presse_universitaire_namur}
+        ```
+    * **After:**
+        ```latex
+        \input{ThesisTemplate/resources/presse_universitaire_namur}
+        ```
+</details>
+
+You can now update your `main.tex` file and write your thesis content in the `chapters/` folder as usual.
+
+When you want to update the template to the latest version, run the following commands in your thesis repository:
+
+```bash
+git submodule update --remote --merge ThesisTemplate
+```
+
 ## Contribute
 
 Contributions are welcome (e.g., bug reports, bug fixes, refactoring, examples, documentation, interesting package 

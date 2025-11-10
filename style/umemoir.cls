@@ -274,7 +274,7 @@
         % \vfill
 
         \vspace*{.5cm}
-        Month Year\par % TODO
+        \PUNDefenseDate\par
         
         {\begin{flushleft}
         \begin{minipage}[c]{.79\textwidth}
@@ -499,6 +499,20 @@ escapeinside={(*@}{@*)}}
 
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{To do: #1}\\}}
 
+% %%% Publication Metadata (PUN) %%%
+
+% Commands to set publication metadata
+\newcommand{\AuthorFullName}[1]{\gdef\PUNAuthorFullName{#1}}
+\newcommand{\DefenseDate}[1]{\gdef\PUNDefenseDate{#1}}
+\newcommand{\ISBN}[1]{\gdef\PUNISBN{#1}}
+\newcommand{\DepotLegal}[1]{\gdef\PUNDepotLegal{#1}}
+
+% Default values if not set
+\def\PUNAuthorFullName{First Name LAST NAME}
+\def\PUNDefenseDate{Month Year}
+\def\PUNISBN{XXX-X-XXXX-XXXX-X}
+\def\PUNDepotLegal{D/XXXX/XXXX/XX}
+
 % %%% Listings %%%
 
 \renewcommand*{\lstlistlistingname}{List of Listings}
@@ -529,13 +543,13 @@ escapeinside={(*@}{@*)}}
 
 % %%% Presse Universitaire Namur (PUN) %%%
 
-\newcommand{\pun}{
+\newcommand{\pun}{%
 \null
 \vspace{10cm}
 
 % %%% Copyright %%%
 
-\noindent \copyright \ Presses universitaires de Namur \& First Name LAST NAME \\ % TODO
+\noindent \copyright \ Presses universitaires de Namur \& \PUNAuthorFullName \\
 Rempart de la Vierge, 13\\
 B - 5000 Namur (Belgique)\\
 \\
@@ -544,8 +558,8 @@ Toute reproduction d'un extrait quelconque de ce livre, hors des limites restric
 Any copy, partial or complete, of this book, apart beyond restrictive limits stated by the law, by any way, notably printed or electronic copy, is formally forbidden for all countries.\\
 \\
 Imprimé en Belgique\\
-ISBN :  % TODO \\
-Dépôt légal: % TODO
+ISBN : \PUNISBN \\
+Dépôt légal: \PUNDepotLegal
 }
 
 % %%% Citation %%%

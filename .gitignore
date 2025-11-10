@@ -1,2 +1,27 @@
 /.idea
 svg-inkscape
+*.pdf
+
+# latex intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.log
+*.ist
+*.glo
+*.lof
+*.lot
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.lol
+*.loa
+*.acn
+*.ptc
+*.ind
