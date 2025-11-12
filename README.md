@@ -160,6 +160,14 @@ Please use the issues and pull requests mechanisms.
     etc. could lead to poor rendering, illegible, shifted, with undesirable margins, etc. Make sure you choose a 
     suitable image and ask for a print preview to Presses Universitaires de Namur.
 
+## Contributing
+If you want to contribute to the project, please consider the following instructions:
+
+* Any contribution must follow the conventions and keep the shape of previous contributions. For instance, any file, class, method, attribute must be named clearly (i.e., no abbreviations).
+* Any contribution must be documented, especially through comments in the source code and, if needed, by updating the README.md file.
+* Any contribution must be developed on a separate branch.
+* Any contribution must be approved, by a code owner ([code owner lists](.github/CODEOWNERS)), via the pull request mechanism.
+
 ## License
                                                                                        
 You are free to:                                                                       
@@ -181,7 +189,7 @@ Under the following terms:
 More details: http://creativecommons.org/licenses/by-nc-sa/4.0/                        
                                                                                        
 Authors:                                                                               
-   * [Fabian Gilson](https://researchportal.unamur.be/fr/persons/fgilson)                                                                 
+   * [Fabian Gilson](https://researchportal.unamur.be/fr/persons/fgilson)                                                             
    * [Nicolas Genon](https://researchportal.unamur.be/fr/persons/nicolas-genon)
 
 Contributors:
@@ -193,4 +201,5 @@ Contributors:
    * [Jérôme Fink](https://researchportal.unamur.be/fr/persons/jfink)
    * [Jules Dejaeghere](https://researchportal.unamur.be/fr/persons/jdejaegh)
    * [Yasmine Akaichi](https://researchportal.unamur.be/fr/persons/yakaichi)
+   * [Nicolas Matton](https://researchportal.unamur.be/fr/persons/nmatton/)
    * ...
