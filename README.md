@@ -201,5 +201,6 @@ Contributors:
    * [Jérôme Fink](https://researchportal.unamur.be/fr/persons/jfink)
    * [Jules Dejaeghere](https://researchportal.unamur.be/fr/persons/jdejaegh)
    * [Yasmine Akaichi](https://researchportal.unamur.be/fr/persons/yakaichi)
+   * [Thibaut Septon](https://researchportal.unamur.be/fr/persons/tsepton/)
    * [Nicolas Matton](https://researchportal.unamur.be/fr/persons/nmatton/)
    * ...
