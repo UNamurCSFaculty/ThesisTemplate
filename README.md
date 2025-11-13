@@ -109,21 +109,14 @@ When you want to update the template to the latest version, run the following co
 git submodule update --remote --merge ThesisTemplate
 ```
 
-## Contribute
-
-Contributions are welcome (e.g., bug reports, bug fixes, refactoring, examples, documentation, interesting package 
-imports, etc.).
-
-Please use the issues and pull requests mechanisms.
-
 ## Frequently Asked Questions
 
 * *Once I've finished my thesis, what should I do?*
 
   * Once your `thesis_v42_PromoterOK_JuryCheck_AliceBobCorrect_FinalVersion_GoFinal_Done_FINAL_THIS_TIME.pdf` ready, 
-    you can contact [Presses Universitaires de Namur (edition.pun@unamur.be)](mailto:edition.pun@unamur.be) by 
+    you can contact [Presses Universitaires de Namur (PUN) (edition.pun@unamur.be)](mailto:edition.pun@unamur.be), **⚠️ 3-4 weeks in advance ⚠️**, by 
     e-mail and explain that you would like to publish your thesis. The entire procedure will then be explained to 
-    you in reply to this e-mail. [More information](https://terranostra.unamur.be/pun/Auteur/publications/).
+    you in reply to this e-mail. The [`/documents`](./documents) folder already gives you an overview of the forms ([Submission form (FR/EN)](documents/2_Thesis_BondeCommande_SubmissionForm.xlsx), [Cover details form (FR/EN)](documents/3_TheseCouverture.xlsx)) that you may receive to fill out. ⚠️ These may be updated. The current version is for informational purposes only. Please only fill out the documents you receive from the PUN. The PUN works with [Ciaco](https://www.ciaco.coop/papeterie), located Louvain-la-Neuve, for the actual printing for a neat impression, in 16 x 24 cm format with welded binding (like a book). Further instructions are given in the [Memento (FR)](./documents/1_Memento_thesesPUN_Ciaco.pdf).
   * At the same time, you will be asked to complete [this form for the BUMP deposit](https://unamur.be/bump/depot-these).
     You can use [this form for extracting the list of your publications](https://terranostra.unamur.be/adre/procedures-pure/creer-liste-publis-FNRS) 
     for helping you in completing the "Article" section asking you to reference the list of your publications that are 
@@ -161,6 +154,10 @@ Please use the issues and pull requests mechanisms.
     suitable image and ask for a print preview to Presses Universitaires de Namur.
 
 ## Contributing
+
+Contributions are welcome (e.g., bug reports, bug fixes, refactoring, examples, documentation, interesting package 
+imports, etc.).
+
 If you want to contribute to the project, please consider the following instructions:
 
 * Any contribution must follow the conventions and keep the shape of previous contributions. For instance, any file, class, method, attribute must be named clearly (i.e., no abbreviations).
@@ -193,6 +190,7 @@ Authors:
    * [Nicolas Genon](https://researchportal.unamur.be/fr/persons/nicolas-genon)
 
 Contributors:
+   * [Sébastien Luca](https://www.unamur.be/fr/profil/sluca)
    * [Xavier Devroey](https://researchportal.unamur.be/fr/persons/xdevroey)
    * [Tony Leclercq](https://researchportal.unamur.be/fr/persons/tolecler)
    * [Maxime Cauz](https://researchportal.unamur.be/fr/persons/mcauz)
