@@ -1,8 +1,14 @@
+# IDE
 /.idea
-svg-inkscape
-*.pdf
 
-# latex intermediate files
+# Software
+svg-inkscape
+
+# PDF
+*.pdf
+!Preview.pdf
+
+# Latex intermediate files
 *.aux
 *.bbl
 *.blg
