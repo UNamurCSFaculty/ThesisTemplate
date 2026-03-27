@@ -111,6 +111,50 @@ When you want to update the template to the latest version, run the following co
 git submodule update --remote --merge ThesisTemplate
 ```
 
+## GitHub Action for Automatic PDF Build and FTP Publish
+
+This template provides a GitHub Action workflow to compile `main.tex` and publish the generated PDF to an FTP server with:
+
+* a versioned file in `versions/`
+* a rolling latest file in `current/latest.pdf`
+
+Important: if you use this template as a git submodule, workflows stored inside `ThesisTemplate/.github/workflows/` are not executed automatically by GitHub for your thesis repository.
+
+To enable the workflow in your own thesis repository:
+
+1. Copy the workflow file from the template to your repository root workflow folder:
+
+```bash
+mkdir -p .github/workflows
+cp ThesisTemplate/.github/workflows/latex-ftp.yml .github/workflows/
+```
+
+2. Add the following repository secrets in your thesis repository:
+  * `FTP_HOST` (ex. `ftp.unamur.be`)
+  * `FTP_USER` (ex. `myusername`)
+  * `FTP_PWD` (ex. `mypassword`)
+  * `FTP_PORT` (ex. `21`)
+
+3. Commit and push the workflow file from your thesis repository.
+
+By default, the workflow is configured for manual execution (`workflow_dispatch`).
+You can run it from GitHub: **Actions** -> **Build LaTeX and Upload PDF to FTP** -> **Run workflow**.
+
+If you want automatic execution on each push, add or keep a `push` trigger in the workflow `on:` section.
+For example:
+```yaml
+name: Build LaTeX and Upload PDF to FTP
+
+on:
+  push:
+  workflow_dispatch:
+...
+```
+
+ > Note that Github Action are paid services, but they offer a free tier with a certain amount of free minutes per month (2000 minutes). If you exceed this limit, you may need to pay for additional minutes. However, for a typical thesis project, the free tier should be sufficient for most users.
+
+4. The workflow is [act](https://github.com/nektos/act) compatible, so you can also run it locally for testing before pushing to GitHub
+
 ## Frequently Asked Questions
 
 * *Once I've finished my thesis, what should I do?*

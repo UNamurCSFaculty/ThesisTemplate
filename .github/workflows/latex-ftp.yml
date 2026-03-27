@@ -1,0 +1,73 @@
+name: Build LaTeX and Upload PDF to FTP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/xu-cheng/texlive-alpine:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+        with:
+          submodules: recursive
+
+      - name: Install extra packages
+        run: apk add --no-cache curl nodejs
+
+      - name: Compile main.tex
+        run: |
+          set -eu
+          TEX="pdflatex -synctex=1 -interaction=nonstopmode -file-line-error main.tex"
+          $TEX              # 1st pass  - generate .aux, .idx, .glo, .acn
+          bibtex main || true   # build bibliography (.bbl)
+          makeglossaries main   # build glossary + acronyms (.gls, .acr)
+          $TEX              # 2nd pass  - incorporate bib/glossary
+          $TEX              # 3rd pass  - resolve all cross-references
+
+      - name: Verify PDF output exists
+        run: test -f main.pdf
+
+      - name: Compute versioned filename
+        id: version
+        run: |
+          SHORT_SHA="$(echo "$GITHUB_SHA" | cut -c1-7)"
+          TIMESTAMP="$(date -u +'%Y%m%d-%H%M%S')"
+          echo "filename=main-${TIMESTAMP}-${GITHUB_RUN_NUMBER}-${SHORT_SHA}.pdf" >> "$GITHUB_OUTPUT"
+
+      - name: Upload versioned and latest PDFs to FTP
+        if: ${{ env.FTP_HOST != '' }}
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PWD: ${{ secrets.FTP_PWD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          VERSIONED_FILENAME: ${{ steps.version.outputs.filename }}
+        run: |
+          set -eu
+
+          FTP_BASE_URL="ftp://${FTP_HOST}:${FTP_PORT}"
+
+          # 1) Upload immutable versioned file to versions/
+          curl --fail --show-error --silent \
+            --ftp-create-dirs \
+            --user "${FTP_USER}:${FTP_PWD}" \
+            -T "main.pdf" \
+            "${FTP_BASE_URL}/versions/${VERSIONED_FILENAME}"
+
+          # 2) Upload/update latest file in current/
+          curl --fail --show-error --silent \
+            --ftp-create-dirs \
+            --user "${FTP_USER}:${FTP_PWD}" \
+            -T "main.pdf" \
+            "${FTP_BASE_URL}/current/latest.pdf"
+
+      - name: Upload build artifact
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v7.0.0
+        with:
+          name: thesis-pdf
+          path: main.pdf
