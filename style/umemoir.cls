@@ -25,7 +25,10 @@
 %    * Nicolas Genon                                                                     %
 % Contributors:                                                                          %
 %    * Maxime Cauz                                                                       %
+%    * Jérôme Fink                                                                       %
 %    * Maxime André                                                                      %
+%    * Thibaut Septon                                                                    %
+%    * Nicolas Matton                                                                    %
 %                                                                                        %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 
@@ -294,6 +297,64 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 
 \aliaspagestyle{part}{empty} % Removes page number on part pages
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                         SUB-PART                                       %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+% Source: adapted from https://tex.stackexchange.com/a/108655
+% (Andrew Swann, CC BY-SA 3.0), modified for memoir class compatibility
+%
+% Usage: \subpart{Title} between a \part and its \chapter commands.
+% If no \subpart is used within a \part, chapters behave as usual.
+% Chapter numbering is NOT affected by subparts (stays 1, 2, 3...).
+
+% Counter (resets when part counter increments)
+\newcounter{subpart}[part]
+\renewcommand{\thesubpart}{\thepart.\Alph{subpart}}
+
+% Hyperref bookmark level for subpart (between part=-1 and chapter=0)
+\providecommand{\toclevel@subpart}{-1}
+
+% Sub-part command: creates a standalone page with centered title, no page number
+% Uses the same fonts/sizes as memoir \part pages (\huge for label, \Huge for title)
+\newcommand{\subpart}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}%
+  \refstepcounter{subpart}%
+  \addcontentsline{toc}{subpart}{\thesubpart\hspace{1em}---\hspace{1em}#1}%
+  \null\vfil
+  {\centering
+    \interlinepenalty \@M
+    \parskip\z@
+    \normalfont\huge\bfseries Subpart \thesubpart
+    \par\vskip 2\onelineskip
+    \normalfont\Huge\bfseries #1\par
+  }%
+  \vfil\newpage
+  \if@twoside
+    \null\thispagestyle{empty}\newpage
+  \fi
+}
+
+% TOC entry for subpart: left-aligned under part, bold, with dot leader to page number
+\newcommand{\l@subpart}[2]{%
+  \ifnum \c@tocdepth >-2\relax
+    \addpenalty{-\@highpenalty}%
+    \addvspace{1em \@plus\p@}%
+    \begingroup
+      \parindent \z@
+      \rightskip \@tocrmarg
+      \parfillskip -\rightskip
+      \leftskip 1.5em\relax
+      \leavevmode
+      {\normalfont\large\bfseries #1\nobreak\hfil\nobreak\hb@xt@\@pnumwidth{\hss}\par}%
+      \nobreak
+      \global\@nobreaktrue
+      \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+  \fi
+}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                          CHAPTER                                       %
