@@ -331,6 +331,35 @@
 }
 \chapterstyle{daleif1}
 
+% Reusable, unnumbered chapter opening. Place after \chapter and its \label.
+% Use one or two short paragraphs (normally 120--180 words): question and
+% approach, then main findings/contribution, scope, and role in the thesis.
+% Keep citations and detailed argumentation in the chapter introduction.
+% Example: \begin{chapteroverview} ... \par ... \end{chapteroverview}
+% The box is deliberately non-floating and unbroken; keep the text concise.
+\newtcolorbox{chapteroverview}{
+    enhanced,
+    colback=black!3!white,
+    colframe=unamur_fac_info_blue,
+    colbacktitle=unamur_fac_info_blue,
+    coltitle=white,
+    fonttitle=\normalfont\bfseries,
+    fontupper=\normalfont\normalsize,
+    title={Chapter Overview},
+    attach boxed title to top left={xshift=4mm,yshift=-2mm},
+    boxed title style={
+        boxrule=0.45pt,arc=1mm,
+        boxsep=1mm,left=1mm,right=1mm,top=0.5mm,bottom=0.5mm
+    },
+    boxrule=0.45pt,
+    arc=2mm,
+    boxsep=0pt,
+    left=3.5mm,right=3.5mm,top=5mm,bottom=3.5mm,
+    before skip=12pt,
+    after skip=16pt,
+    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}}
+}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 % %%%                                   Text boxes                                   %%% %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
